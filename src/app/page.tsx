@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Link from 'next/link';
 
-const Home: React.FC = () => {
+function Home() {
     return (
         <div>
             {/* Navbar */}
@@ -11,13 +10,11 @@ const Home: React.FC = () => {
                         Missionary App
                     </div>
                     <ul className="flex space-x-4">
-                        {/* Use Link for internal navigation */}
-                        <Link to="/" className="text-white">
-                            Home
-                        </Link>
-                        <Link to="/guided-breathing" className="text-white">
-                            Guided Breathing
-                        </Link>
+                        <li>
+                            <Link href="/" className="text-white">
+                                Home
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -35,6 +32,6 @@ const Home: React.FC = () => {
             </main>
         </div>
     );
-};
+}
 
 export default Home;
