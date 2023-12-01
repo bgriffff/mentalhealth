@@ -1,5 +1,4 @@
 import Link from "next/link";
-import DailyCheckIn from "./components/DailyCheckIn";
 
 export default function Page() {
   return (
@@ -22,7 +21,6 @@ export default function Page() {
 
       {/* Main content */}
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <DailyCheckIn />
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">
             Welcome to My Missionary Mental Health App
