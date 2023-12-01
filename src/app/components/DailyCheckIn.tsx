@@ -25,8 +25,9 @@ export default function DailyCheckIn() {
     >
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Daily Check-in!</h3>
+          <h3 className="font-bold text-lg">Daily Check-in</h3>
           <br></br>
+          {/* All of the button emojis */}
           <div className="grid grid-cols-6 gap-4">
             <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-purple-600 hover:bg-purple-500 shadow-lg">
               <div className="text-white">Happy</div>
