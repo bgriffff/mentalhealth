@@ -18,10 +18,156 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #1d0c15;
+  color: #e6e8ef;
+}
+
+/* Breathing Exercise CSS */
+
+.wrapper {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 40vh;
+  height: 40vh;
+  position: absolute;
+  margin: auto;
+}
+
+.directions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.directions .message {
+  padding: 0.25rem;
+  animation: text-highlight 16s infinite;
+  color: #a7adc6;
+  /* opacity: 0.8; */
+}
+
+.directions .message:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.directions .message:nth-child(2) {
+  animation-delay: 4000ms;
+}
+
+.directions .message:nth-child(3) {
+  animation-delay: 8000ms;
+}
+
+.directions .message:nth-child(4) {
+  animation-delay: 12000ms;
+}
+
+.timer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1cqb;
+  height: 10%;
+  background: #a7adc6;
+}
+
+.timer:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  animation-name: timer;
+  animation-duration: 32000ms;
+  animation-timing-function: linear; /* Set animation to be linear */
+  animation-iteration-count: infinite;
+  background: #56667a;
+  z-index: 0;
+}
+
+.timer.inhale {
+  left: 10%;
+  width: 80%;
+  transform: rotate(0);
+}
+.timer.inhale-hold {
+  position: absolute;
+  width: 80%;
+  right: 10%;
+  bottom: 10%;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}
+
+.timer.inhale-hold:after {
+  animation-delay: 4000ms;
+}
+
+.timer.exhale {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+.timer.exhale:after {
+  animation-delay: 8000ms;
+}
+
+.timer.exhale-hold {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 10%;
+  transform: rotate(270deg);
+  transform-origin: bottom left;
+}
+.timer.exhale-hold:after {
+  animation-delay: 12000ms;
+}
+
+.indicators {
+  display: flex;
+  height: 100%;
+}
+.indicator {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: block;
+  flex: 1;
+  border: 1px solid #1d0c15;
+  box-sizing: border-box;
+}
+
+@keyframes timer {
+  10%,
+  50% {
+    transform: translateX(0%);
+  }
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes text-highlight {
+  2%,
+  25% {
+    color: #e6e8ef;
+    opacity: 1;
+    font-weight: 600;
+  }
+  28%,
+  100% {
+    color: #ced1df;
+    opacity: 0.6;
+  }
 }

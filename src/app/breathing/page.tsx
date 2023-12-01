@@ -1,14 +1,13 @@
+import "../globals.css";
 import Link from "next/link";
 
-export default function Page() {
+export default function breathing() {
     return (
         <div>
-            {/* Navbar */}
             <nav className="bg-gray-800 p-4">
                 <div className="container mx-auto flex items-center justify-between">
                     <div className="text-white text-lg font-bold">Missionary App</div>
                     <ul className="flex space-x-4">
-                        {/* Use Link for internal navigation */}
                         <Link href="/" className="text-white">
                             Home
                         </Link>
@@ -19,19 +18,53 @@ export default function Page() {
                 </div>
             </nav>
 
-            {/* Main content */}
             <main className="flex min-h-screen flex-col items-center justify-between p-24">
                 <div className="text-center mb-8">
-                    <h1 className="text-4xl font-bold mb-4">
-                        Welcome to My Missionary Mental Health App
-                    </h1>
-                    <p className="text-lg text-white-600">
-                        Providing Support and Wellness for Missionaries
-                    </p>
+                    <h1 className="text-4xl font-bold mb-4">Box Breathing</h1>
                 </div>
+                <div className="wrapper">
+                    <div className="directions">
+                        <div className="message">Inhale</div>
+                        <div className="message">Hold</div>
+                        <div className="message">Exhale</div>
+                        <div className="message">Hold</div>
+                    </div>
+                    <div className="timer inhale">
+                        <div className="progress"></div>
+                            <div className="indicators">
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                        </div>
+                    </div>
+                    <div className="timer inhale-hold">
+                        <div className="indicators">
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                        </div>
+                    </div>
+                    <div className="timer exhale">
+                        <div className="indicators">
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                        </div>
+                    </div>
+                    <div className="timer exhale-hold">
+                        <div className="indicators">
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                            <div className="indicator"></div>
+                        </div>
+                    </div>
+              </div>
             </main>
 
-            {/* Footer */}
             <footer className="bg-gray-800 p-4 mt-8">
                 <div className="container mx-auto flex justify-between text-white text-center">
                     <div className="w-1/2">
@@ -54,5 +87,5 @@ export default function Page() {
                 </div>
             </footer>
         </div>
-    );
+  );
 }
