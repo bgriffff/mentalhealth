@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 
 export default function DailyCheckIn() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const hasModalBeenClosed = localStorage.getItem("modalClosed") === "true";
+  const [isModalOpen, setIsModalOpen] = useState(!hasModalBeenClosed);
 
   useEffect(() => {
     if (isModalOpen) {
@@ -15,6 +16,7 @@ export default function DailyCheckIn() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    localStorage.setItem("modalClosed", "true");
   };
 
   return (
@@ -25,7 +27,7 @@ export default function DailyCheckIn() {
     >
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">Daily Check-in</h3>
+          <h3 className="font-bold text-lg text-black">Daily Check-in</h3>
           <br></br>
           {/* All of the button emojis */}
           <div className="grid grid-cols-6 gap-4">
