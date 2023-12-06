@@ -27,7 +27,7 @@ export default function Page() {
           <h1 className="text-4xl font-bold mb-4">
             Welcome to My Missionary Mental Health App
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-white-600">
             Providing Support and Wellness for Missionaries
           </p>
         </div>
