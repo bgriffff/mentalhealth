@@ -31,27 +31,45 @@ export default function DailyCheckIn() {
           <br></br>
           {/* All of the button emojis */}
           <div className="grid grid-cols-6 gap-4">
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-purple-600 hover:bg-purple-500 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-purple-600 hover:bg-purple-500 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Happy</div>
               <HappyIcon />
             </div>
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-teal-500 hover:bg-teal-400 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-teal-500 hover:bg-teal-400 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Relaxed</div>
               <RelaxedIcon />
             </div>
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-orange-500 hover:bg-orange-400 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-orange-500 hover:bg-orange-400 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Grateful</div>
               <GratitudeIcon />
             </div>
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-sky-600 hover:bg-sky-500 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-sky-600 hover:bg-sky-500 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Sad</div>
               <SadIcon />
             </div>
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-red-600 hover:bg-red-500 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-red-600 hover:bg-red-500 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Angry</div>
               <AngryIcon />
             </div>
-            <div className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-success-content hover:bg-slate-700 shadow-lg">
+            <div
+              className=" btn w-16 h-16 rounded-lg flex items-center justify-center bg-success-content hover:bg-slate-700 shadow-lg"
+              onClick={handleCloseModal}
+            >
               <div className="text-white">Tired</div>
               <TiredIcon />
             </div>
