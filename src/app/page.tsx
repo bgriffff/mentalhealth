@@ -32,7 +32,7 @@ export default function Page() {
           <div className="card bg-base-100 shadow-xl">
             <div className="card-body text-black">
               <h2 className="card-title">Daily Quote:</h2>
-              <p>"Think celestial" - President Nelson</p>
+              <p>"Think celestial!" - President Nelson</p>
             </div>
           </div>
           <br />
