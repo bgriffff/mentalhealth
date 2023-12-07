@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import DailyCheckIn from "./components/DailyCheckIn";
+import DailyCheckIn2 from "./components/DailyCheckIn2";
 
 export default function Page() {
   return (
@@ -20,7 +21,8 @@ export default function Page() {
       </nav>
 
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <DailyCheckIn />
+        {/* Change this */}
+        <DailyCheckIn2 />
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">
             Missionary Mental Health App
