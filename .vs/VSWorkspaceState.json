@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\breathing"
   ],
-  "SelectedNode": "\\src\\app\\page.tsx",
+  "SelectedNode": "\\src\\app\\breathing\\page.tsx",
   "PreviewInSolutionExplorer": false
 }
