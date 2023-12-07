@@ -1,14 +1,15 @@
 import Link from "next/link";
-import Image from "next/image";
 import DailyCheckIn from "./components/DailyCheckIn";
 
 export default function Page() {
   return (
     <div>
+      {/* Navbar */}
       <nav className="bg-gray-800 p-4">
         <div className="container mx-auto flex items-center justify-between">
           <div className="text-white text-lg font-bold">Missionary App</div>
           <ul className="flex space-x-4">
+            {/* Use Link for internal navigation */}
             <Link href="/" className="text-white">
               Home
             </Link>
@@ -19,40 +20,27 @@ export default function Page() {
         </div>
       </nav>
 
+      {/* Main content */}
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
         <DailyCheckIn />
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4">
-            Missionary Mental Health App
+            Welcome to My Missionary Mental Health App
           </h1>
-          <p className="text-lg text-white-600">
+          <p className="text-lg text-gray-600">
             Providing Support and Wellness for Missionaries
           </p>
-          <br></br>
-          <div className="card bg-base-100 shadow-xl">
-            <div className="card-body text-black">
-              <h2 className="card-title">Daily Quote:</h2>
-              <p>"Think celestial" - President Nelson</p>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div className="flex justify-center">
-            <Image
-              src="/images/moodGraph.JPG"
-              alt="moodGraph"
-              width={500}
-              height={500}
-            />
-          </div>
         </div>
       </main>
 
+      {/* Footer */}
       <footer className="bg-gray-800 p-4 mt-8">
         <div className="container mx-auto flex justify-between text-white text-center">
           <div className="w-1/2">
             <p>
-              <strong>Crisis Hotlines</strong>
+              <u>
+                <strong>Crisis Hotlines</strong>
+              </u>
             </p>
             <p>
               <strong>Utah Crisis Number:</strong> 801-587-3000
@@ -69,7 +57,9 @@ export default function Page() {
           </div>
           <div className="w-1/2">
             <p>
-              <strong>Other Resources</strong>
+              <u>
+                <strong>Other Resources</strong>
+              </u>
             </p>
             <a
               href="https://bocarecoverycenter.com/addiction/depression/"
