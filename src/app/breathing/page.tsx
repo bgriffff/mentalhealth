@@ -14,6 +14,9 @@ export default function breathing() {
                         <Link href="/breathing" className="text-white">
                             Guided Breathing
                         </Link>
+                        <Link href="/companion" className="text-white">
+                            Help Companion
+                        </Link>
                     </ul>
                 </div>
             </nav>
